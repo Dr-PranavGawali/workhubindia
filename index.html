@@ -3,91 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkHub India | Premium Opportunity</title>
+<title>WorkHub India | Pranav Gawali</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
-  /* --- PREMIUM ULTRA PRO MAX STYLING --- */
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    color: #f8fafc;
-    text-align: center;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-
-  .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 24px;
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 500px;
-  }
-
-  header { padding: 80px 20px; }
-  
-  .btn-primary {
-    background: #38bdf8;
-    color: #0f172a;
-    padding: 16px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    transition: 0.3s;
-  }
-  .btn-primary:hover { transform: scale(1.05); }
-
-  .form-container input {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 12px;
-    border: none;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    box-sizing: border-box;
-  }
-
-  .founder-photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid #38bdf8;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-
-  .floating-wa, .floating-bot {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    text-decoration: none;
-    z-index: 1000;
-  }
-  .floating-bot { bottom: 100px; background: #38bdf8; border: none; cursor: pointer; }
+  body { font-family: 'Poppins', sans-serif; margin: 0; background: #0f172a; color: #f8fafc; text-align: center; scroll-behavior: smooth; }
+  .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 40px; margin: 30px auto; max-width: 600px; }
+  .hero { padding: 100px 20px; }
+  .btn-primary { background: #38bdf8; color: #0f172a; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; }
+  .form-container input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 12px; border: none; background: rgba(255, 255, 255, 0.1); color: white; box-sizing: border-box; }
+  .founder-photo { width: 180px; height: 180px; border-radius: 50%; border: 4px solid #38bdf8; object-fit: cover; }
+  .floating-buttons { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 10px; }
+  .btn-float { width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer; font-size: 24px; }
 </style>
 </head>
-
 <body>
 
-  <header>
+  <!-- HERO SECTION -->
+  <section class="hero">
     <h1>WorkHub India</h1>
     <p>Learn • Grow • Earn</p>
+    <h2 style="font-size: 2.5rem; margin: 20px 0;">Start Your Work From Home Journey</h2>
     <a href="#apply-form" class="btn-primary">Apply Now ➔</a>
-  </header>
+  </section>
 
   <!-- FORM SECTION -->
   <section id="apply-form" style="padding: 50px 20px;">
@@ -110,24 +47,19 @@
     </div>
   </section>
 
-  <!-- BUTTONS -->
-  <a href="https://wa.me/917666601285" class="floating-wa" style="background:#25D366;">💬</a>
-  <button onclick="openChat()" class="floating-bot">🤖</button>
+  <div class="floating-buttons">
+    <button onclick="window.open('https://wa.me/917666601285')" class="btn-float" style="background:#25D366;">💬</button>
+    <button onclick="window.open('https://wa.me/917666601285?text=Hello%20Pranav%20Sir,%20I%20need%20help%20from%20RISEBOT!')" class="btn-float" style="background:#38bdf8;">🤖</button>
+  </div>
 
   <script>
     function sendToWhatsapp() {
-      let name = document.getElementById("userName").value;
-      let age = document.getElementById("userAge").value;
-      let city = document.getElementById("userCity").value;
-      let edu = document.getElementById("userEdu").value;
-      if(age < 18) { alert("Age must be 18+"); return; }
-      let message = `Hello Pranav Sir, I want to apply! Name: ${name}, Age: ${age}, City: ${city}, Profession: ${edu}`;
-      window.open(`https://wa.me/917666601285?text=${encodeURIComponent(message)}`, "_blank");
-    }
-    function openChat() {
-      window.open(`https://wa.me/917666601285?text=Hello Pranav Sir, I need help from RISEBOT!`, "_blank");
+      let n = document.getElementById("userName").value;
+      let a = document.getElementById("userAge").value;
+      let c = document.getElementById("userCity").value;
+      let e = document.getElementById("userEdu").value;
+      window.open(`https://wa.me/917666601285?text=Name:${n}, Age:${a}, City:${c}, Profession:${e}`, "_blank");
     }
   </script>
-
 </body>
 </html>
