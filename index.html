@@ -127,12 +127,46 @@
     font-size: 1rem;
   }
 
+  /* --- APPLICATION FORM --- */
+  .form-section {
+    padding: 70px 20px;
+    background: #ffffff;
+  }
+  
+  .form-container {
+    background: #f5f5f7;
+    max-width: 500px;
+    margin: 30px auto 0;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.02), 0 15px 35px rgba(0,0,0,0.05);
+    text-align: left;
+    border: 1px solid white;
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s;
+  }
+
+  .form-container input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.2);
+  }
+
   /* --- FOUNDER SECTION --- */
   .founder-section {
     padding: 80px 20px;
-    background: #ffffff;
-    border-radius: 40px 40px 0 0; /* Premium curve */
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.03);
+    background: #f5f5f7;
+    border-top: 1px solid #e5e5e7;
   }
 
   .founder-photo {
@@ -140,7 +174,7 @@
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #f5f5f7;
+    border: 6px solid #ffffff;
     box-shadow: 0 15px 35px rgba(0, 102, 204, 0.2);
     margin-bottom: 20px;
   }
@@ -192,7 +226,8 @@
     <h2 class="animate-2">Start Your Work From Home Journey</h2>
     <p class="animate-2">Students • Housewives • Freshers • Professionals</p>
 
-    <a href="https://wa.me/917666601285?text=Hello%20Pranav%20Sir%2C%20I%20visited%20the%20WorkHub%20India%20website.%20I%20am%20interested%20in%20the%20Work%20From%20Home%20Opportunity." class="btn-primary animate-3" target="_blank">
+    <!-- 'Apply Now' click kelyavar direct form var scroll hoil -->
+    <a href="#apply-form" class="btn-primary animate-3">
       Apply Now ➔
     </a>
   </section>
@@ -214,6 +249,30 @@
       <p>High-income skills and remote opportunities across India.</p>
     </div>
   </div>
+
+  <!-- 18+ APPLICATION FORM -->
+  <section class="form-section" id="apply-form">
+    <h2 style="font-size: 2.2rem; color: #111; margin-bottom: 10px;">Apply For The Opportunity</h2>
+    <p style="color: #555; font-size: 1.1rem; margin: 0;">Fill your details below. Our team will contact you.</p>
+    
+    <div class="form-container">
+      <label style="font-weight: 600; font-size: 0.9rem; color: #333; margin-bottom: 5px; display: block;">Full Name</label>
+      <input type="text" id="userName" placeholder="e.g. Rahul Patil" required>
+      
+      <label style="font-weight: 600; font-size: 0.9rem; color: #333; margin-bottom: 5px; display: block;">Age (18+ Only)</label>
+      <input type="number" id="userAge" placeholder="e.g. 21" required>
+      
+      <label style="font-weight: 600; font-size: 0.9rem; color: #333; margin-bottom: 5px; display: block;">City</label>
+      <input type="text" id="userCity" placeholder="e.g. Pune" required>
+      
+      <label style="font-weight: 600; font-size: 0.9rem; color: #333; margin-bottom: 5px; display: block;">Education / Profession</label>
+      <input type="text" id="userEdu" placeholder="e.g. B.Com Student" required>
+      
+      <button onclick="sendToWhatsapp()" class="btn-primary" style="width: 100%; border:none; cursor:pointer; font-family:'Poppins';">
+        Submit & Apply ➔
+      </button>
+    </div>
+  </section>
 
   <!-- MEET OUR FOUNDER SECTION -->
   <section class="founder-section">
@@ -242,6 +301,30 @@
     <p>© 2026 WorkHub India | Founded by Pranav Rohidas Gawali.</p>
     <p style="margin-top: 5px;">All Rights Reserved.</p>
   </footer>
+
+  <!-- WHATSAPP AUTOMATION SCRIPT -->
+  <script>
+    function sendToWhatsapp() {
+      let name = document.getElementById("userName").value;
+      let age = document.getElementById("userAge").value;
+      let city = document.getElementById("userCity").value;
+      let edu = document.getElementById("userEdu").value;
+
+      if(name === "" || age === "" || city === "" || edu === "") {
+        alert("Please fill all the details completely!");
+        return;
+      }
+
+      if(age < 18) {
+        alert("Sorry, this opportunity is strictly for individuals aged 18 and above.");
+        return;
+      }
+
+      let message = `Hello Pranav Sir, 💼%0A%0AI want to apply for the WorkHub India Opportunity. Here are my details:%0A%0A👤 *Name:* ${name}%0A📅 *Age:* ${age}%0A📍 *City:* ${city}%0A🎓 *Profession:* ${edu}%0A%0APlease guide me on how to start!`;
+      let waLink = `https://wa.me/917666601285?text=${message}`;
+      window.open(waLink, "_blank");
+    }
+  </script>
 
 </body>
 </html>
