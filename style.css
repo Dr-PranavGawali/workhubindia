@@ -1,0 +1,333 @@
+/* =========================
+   WorkHub India
+   Premium CSS - Part 1
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+/* Navigation */
+
+header{
+background:#0b5ed7;
+color:#fff;
+padding:18px 8%;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.menu{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.menu a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#ffd54f;
+}
+
+/* Hero Section */
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#ffffff,#eaf3ff);
+}
+
+.hero h1,
+.hero h2{
+font-size:42px;
+margin-bottom:15px;
+color:#0b5ed7;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+color:#555;
+}
+
+/* Buttons */
+
+.btn,
+.btn-primary{
+display:inline-block;
+padding:14px 32px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+border:none;
+cursor:pointer;
+}
+
+.btn:hover,
+.btn-primary:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(37,211,102,.35);
+}
+
+.btn2,
+.btn-secondary{
+display:inline-block;
+padding:14px 32px;
+background:#0b5ed7;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn2:hover,
+.btn-secondary:hover{
+background:#0849a6;
+}
+/* =========================
+   CARDS SECTION
+========================= */
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:60px 20px;
+background:#fff;
+}
+
+.card{
+background:#ffffff;
+width:280px;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card h3{
+color:#0b5ed7;
+margin-bottom:10px;
+font-size:20px;
+}
+
+.card p{
+color:#555;
+font-size:14px;
+}
+
+/* =========================
+   FOUNDER SECTION
+========================= */
+
+.founder-section{
+padding:80px 20px;
+background:linear-gradient(135deg,#f8fbff,#ffffff);
+text-align:center;
+}
+
+.founder-photo{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #0b5ed7;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+margin-bottom:15px;
+}
+
+.signature{
+width:140px;
+margin-top:15px;
+}
+
+/* =========================
+   APPLY FORM
+========================= */
+
+.apply-form{
+padding:60px 20px;
+max-width:600px;
+margin:auto;
+background:#fff;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+input, select{
+width:100%;
+padding:12px;
+margin-top:5px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:10px;
+outline:none;
+}
+
+input:focus, select:focus{
+border-color:#0b5ed7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+text-align:center;
+padding:30px 20px;
+background:#0b5ed7;
+color:#fff;
+margin-top:50px;
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px){
+
+.hero h1,
+.hero h2{
+font-size:28px;
+}
+
+.menu{
+flex-direction:column;
+gap:10px;
+margin-top:10px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+/* Apply form mobile fix */
+.apply-form{
+margin:20px;
+padding:30px 15px;
+}
+
+/* Founder image resize */
+.founder-photo{
+width:140px;
+height:140px;
+}
+
+}
+
+/* =========================
+   SMALL ANIMATIONS
+========================= */
+
+.btn, .btn-primary, .btn2, .btn-secondary{
+animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+.apply-form{
+max-width:700px;
+margin:50px auto;
+padding:30px;
+background:#ffffff;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.apply-form h2{
+text-align:center;
+margin-bottom:10px;
+}
+
+.apply-form p{
+text-align:center;
+margin-bottom:25px;
+}
+
+.apply-form input,
+.apply-form select{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
+box-sizing:border-box;
+}
+
+#successMessage{
+text-align:center;
+background:#f0fff4;
+padding:30px;
+border-radius:20px;
+border:2px solid #25D366;
+margin-top:20px;
+}
+
+#successMessage h2{
+color:#25D366;
+}
+
+.btn-primary,
+.btn-secondary{
+display:inline-block;
+padding:12px 25px;
+border-radius:10px;
+text-decoration:none;
+margin:10px;
+}
