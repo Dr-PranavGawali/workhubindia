@@ -30,3 +30,15 @@ top:0,
 behavior:"smooth"
 });
 }
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach((item) => {
+    const top = item.getBoundingClientRect().top;
+    const visible = 100;
+
+    if (top < window.innerHeight - visible) {
+      item.classList.add("active");
+    }
+  });
+});
