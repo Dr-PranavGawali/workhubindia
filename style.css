@@ -652,3 +652,48 @@ transition:.3s;
 transform:scale(1.1);
 
 }
+/* DARK MODE */
+
+#themeToggle{
+padding:10px 15px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+background:#25D366;
+color:white;
+font-size:18px;
+margin-left:15px;
+transition:.3s;
+}
+
+#themeToggle:hover{
+transform:scale(1.05);
+}
+
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+.dark-mode section{
+background:#1b1b1b !important;
+}
+
+.dark-mode .card,
+.dark-mode .trust-card,
+.dark-mode .why-card,
+.dark-mode .step,
+.dark-mode .learn-card,
+.dark-mode .contact-card,
+.dark-mode .mission-box div{
+background:#252525;
+color:white;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a{
+color:white;
+}
