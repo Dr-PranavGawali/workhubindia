@@ -492,3 +492,48 @@ transition:.3s;
 .mission-box div:hover{
 transform:translateY(-8px);
 }
+/* WHAT YOU'LL LEARN */
+
+.learn-section{
+padding:80px 20px;
+text-align:center;
+background:#fff;
+}
+
+.learn-section h2{
+font-size:36px;
+color:#0b5ed7;
+margin-bottom:10px;
+}
+
+.learn-section p{
+color:#666;
+margin-bottom:40px;
+}
+
+.learn-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.learn-card{
+background:#f8fbff;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+font-size:35px;
+}
+
+.learn-card:hover{
+transform:translateY(-8px);
+}
+
+.learn-card h3{
+font-size:20px;
+margin-top:15px;
+color:#0b5ed7;
+}
