@@ -734,3 +734,43 @@ width:60px;
 }
 
 }
+.about{
+max-width:900px;
+margin:auto;
+padding:70px 20px;
+text-align:center;
+}
+
+.about h2{
+font-size:42px;
+color:#0b5ed7;
+margin-bottom:20px;
+}
+
+.about p{
+font-size:18px;
+color:#555;
+line-height:1.8;
+}
+
+.final-section,
+.cta-section{
+text-align:center;
+padding:80px 20px;
+}
+
+.final-section{
+max-width:1000px;
+margin:50px auto;
+background:#fff;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.founder-photo{
+transition:.4s;
+}
+
+.founder-photo:hover{
+transform:scale(1.05);
+}
