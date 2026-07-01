@@ -4,31 +4,25 @@ event.preventDefault();
 
 this.style.display = "none";
 
-document.getElementById("successMessage").style.display = "block";
+const form = document.getElementById("applicationForm");
 
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
+if(form){
 
-});
-const topBtn=document.getElementById("topBtn");
+form.addEventListener("submit", function(event){
 
-window.onscroll=function(){
+event.preventDefault();
 
-if(document.documentElement.scrollTop>300){
-topBtn.style.display="block";
-}else{
-topBtn.style.display="none";
-}
+this.style.display="none";
 
-}
+document.getElementById("successMessage").style.display="block";
 
-topBtn.onclick=function(){
 window.scrollTo({
 top:0,
 behavior:"smooth"
 });
+
+});
+
 }
 const reveals = document.querySelectorAll(".reveal");
 
