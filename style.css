@@ -664,3 +664,73 @@ transition:all .8s ease;
 opacity:1;
 transform:translateY(0);
 }
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+padding:15px;
+text-align:center;
+}
+
+.brand{
+flex-direction:column;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+margin-top:15px;
+}
+
+.hero h1,
+.hero h2,
+.learn-hero h1{
+font-size:30px;
+}
+
+.hero p,
+.learn-hero p{
+font-size:16px;
+padding:0 15px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:95%;
+}
+
+.founder-photo{
+width:150px;
+height:150px;
+}
+
+.apply-form{
+width:95%;
+margin:20px auto;
+padding:20px;
+}
+
+.btn-primary,
+.btn-secondary{
+width:100%;
+margin:8px 0;
+text-align:center;
+}
+
+footer{
+padding:25px 15px;
+}
+
+.logo-image{
+width:60px;
+}
+
+}
